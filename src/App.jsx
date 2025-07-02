@@ -1,32 +1,27 @@
-import Input from './components/input';
 import './App.css'
-import Card from './components/card';
 import Task from './components/task';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import About from './about';
-import Navbar from './navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './components/about';
+import Navbar from './components/navbar';
 
 function App() {
-  
-
-  
   return (
     <BrowserRouter>
-    <title>To-do-list</title>
+      <title>To-do-list</title>
       <div className='App'>
         <header>
           <h1>My React App</h1>
           <h2>This is my first application</h2>
         </header>
-        <Navbar/>
+        <Navbar />
         <main>
-        <Routes>
-          <Route path="/" element={<Task />}/>
-          <Route path="/About" element={<About/>}/>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Task />} />
+            <Route path="/About" element={<About />} />
+          </Routes>
         </main>
-     
-       </div>
+
+      </div>
     </BrowserRouter>
   )
 }
